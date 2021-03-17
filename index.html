@@ -5,14 +5,44 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Makeup Lab</title>
+        <script src="test.js"></script>
+        <script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
         <script>
-        window.TrackJS && TrackJS.install({ 
-            token: "7af26db5bb28495fa367b0efa1725b24"
-            // for more configuration options, see https://docs.trackjs.com
-        });
+            window.TrackJS && TrackJS.install({ 
+                token: "7af26db5bb28495fa367b0efa1725b24"
+                // for more configuration options, see https://docs.trackjs.com
+            });
         </script>
     </head>
     <body>
-        <h1>Calculator</h1>
+        <h1>Makeup Lab</h1>
+
+        <form id="calcForm">
+            <input id="num1">
+            <select id="operation">
+                <option>+</option>
+                <option>-</option>
+                <option>*</option>
+                <option>/</option>
+                <option>nonoperational</option>
+            </select>
+            <input id="num2">
+            <button type="submit">=</button>
+            <span id="calculation">0</span>
+        </form>
+
+        <form id="consoleForm">
+            <button id="console_log">Console Log Demo</button>
+            <button id="console_error">Console Error Demo</button>
+            <button id="console_dir">console.dir()</button>
+            <button id="console_dirxml">console.dirxml()</button>
+            <button id="console_group">console.group()</button>
+            <button id="console_groupEnd">console.groupEnd()</button>
+            <button id="console_table">Console Table</button>
+            <button id="console_time">Start Timer</button>
+            <button id="console_timeEnd">End Timer</button>
+            <button id="console_trace">Console Trace</button>
+            <button id="global_error">Trigger a Global Error</button>
+        </form>
     </body>
 </html>
